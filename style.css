@@ -28,6 +28,23 @@ header p {
     font-size: 1.1rem;
 }
 
+.header-cerpen {
+    display: flex;
+    justify-content: space-between; /* Mendorong judul mentok ke kiri, tanggal mentok ke kanan */
+    align-items: baseline; /* Menyamaratakan garis bawah teks agar sejajar rapi */
+    margin-bottom: 12px; /* Memberi jarak dengan paragraf sinopsis di bawahnya */
+}
+
+.header-cerpen h2 {
+    margin: 0; /* Wajib diubah menjadi 0 agar kotak flexbox tidak berantakan */
+}
+
+.header-cerpen time {
+    font-size: 0.9rem; /* Dibuat lebih kecil dari teks biasa (1rem) */
+    color: #666; /* Warna abu-abu agar mata pembaca tetap fokus pada judul utama */
+    margin-left: 15px; /* Memberi jarak aman jika layar ponsel sangat sempit dan teks bertabrakan */
+}
+
 /* Bagian Kotak Cerpen (Article Card) */
 article {
     background: #ffffff;

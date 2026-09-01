@@ -4,8 +4,9 @@ body {
     background-color: #fdfbf7;
     color: #2c2c2c;
     line-height: 1.6;
-    max-width: 700px; /* Lebar maksimal halaman agar nyaman dibaca */
-    margin: 0 auto;    /* Membuat posisi teks persis di tengah layar */
+    max-width: 800px; /* Batas mentok lebar untuk layar laptop */
+    width: 90%; /* Memberi sisa ruang kosong di sisi kiri-kanan layar HP */
+    margin: 0 auto;    /* Mendorong konten persis ke tengah layar */
     padding: 40px 20px; /* Ruang kosong (padding) di tepi layar */
 }
 

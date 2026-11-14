@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedah & Interpretasi Cerpen - Neilo Archive</title>
+    <meta name="description" content="Kajian tematik, esai kritis, dan penjelasan makna di balik kumpulan cerpen fiksi Neilo Febrian Utomo.">
+    
+    <!-- Google Fonts: Lora & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Indikator Kemajuan Membaca -->
+    <div id="reading-progress" aria-hidden="true"></div>
+
+    <!-- Navigasi Utama -->
+    <nav class="site-nav" aria-label="Navigasi Halaman">
+        <div class="container">
+            <div style="display: flex; align-items: center;">
+                <a href="index.html" class="nav-brand">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+                    <span>Ruang Fiksi</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Koleksi Cerpen</a>
+                    <a href="interpretasi.html" class="nav-link active">Bedah & Interpretasi</a>
+                </div>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="font-size-group" title="Ubah Ukuran Teks">
+                    <button id="font-decrease-btn" type="button" aria-label="Kecilkan Teks">A-</button>
+                    <button id="font-increase-btn" type="button" aria-label="Besarkan Teks">A+</button>
+                </div>
+                
+                <button id="theme-toggle-btn" class="nav-btn" type="button" aria-label="Ganti Tema">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <span class="theme-label">Tema</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Hero Esai -->
+    <header class="home-hero">
+        <div class="container">
+            <div class="home-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Catatan Penulis & Telaah Kritis
+            </div>
+            <h1>Ruang Bedah & Interpretasi</h1>
+            <p>Eksplorasi lapisan gagasan, kritik sosial, dan renungan eksistensial yang melandasi masing-masing cerpen dalam Ruang Fiksi.</p>
+        </div>
+    </header>
+
+    <!-- Bilah Navigasi Cepat (Sticky Jump Bar) -->
+    <div class="essay-toc-bar" aria-label="Pintas Cepat Cerpen">
+        <div class="container">
+            <div class="essay-toc-scroll">
+                <a href="#esai-pemustaka" class="toc-link">🏛️ Pemustaka yang Bijak</a>
+                <a href="#esai-pengakuan" class="toc-link">⏳ Pengakuan</a>
+                <a href="#esai-perempuan" class="toc-link">🛵 Perempuan di Pinggir Jalan</a>
+                <a href="#esai-seribu-kali" class="toc-link">🌊 Satu Hari Seribu Kali</a>
+                <a href="#esai-serigala" class="toc-link">🐺 Serigala Terkutuk</a>
+                <a href="#esai-tias" class="toc-link">☕ Tias Itu Orang Baik</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Konten Esai -->
+    <main class="essay-page-wrapper">
+        <!-- Esai 1: Pemustaka yang Bijak -->
+        <article class="essay-article" id="esai-pemustaka" style="--essay-accent: #2d6a4f; --essay-tint: rgba(45, 106, 79, 0.08);">
+            <header class="essay-article-header">
+                <span class="essay-category-tag" style="background: rgba(45, 106, 79, 0.1); color: #2d6a4f;">
+                    Satir Sosial • Analisis Moralitas
+                </span>
+                <h2 class="essay-title">Paradoks Pahlawan Fiktif dan Kemunafikan Keadilan di Ruang Publik</h2>
+                <div class="essay-story-ref">
+                    <span>Membahas naskah cerpen:</span>
+                    <strong><a href="pemustaka-yang-bijak.html" style="color: inherit; text-decoration: underline;">Pemustaka yang Bijak</a></strong>
+                </div>
+            </header>
+
+            <div class="essay-summary-grid">
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                        Premis Kunci
+                    </div>
+                    <p class="summary-value">Upaya membela diri dari pencurian tas di perpustakaan diintervensi oleh remaja yang memaksakan narasi empati palsu.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        Fokus Kritik
+                    </div>
+                    <p class="summary-value"><em>Virtue signaling</em>, sindrom karakter utama (<em>main character syndrome</em>), dan keadilan abu-abu birokrasi.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Simbol Sentral
+                    </div>
+                    <p class="summary-value">Buku petualangan <em>zero to hero</em> sebagai instrumen delusi moral pembaca pemula.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                        Simpulan Realistis
+                    </div>
+                    <p class="summary-value">Kerapuhan otoritas publik saat berhadapan dengan retorika moral populis tanpa data objektif.</p>
+                </div>
+            </div>
+
+            <blockquote class="essay-key-quote">
+                "Seolah kata-kata itu ia kutip dari novel, walau memang benar adanya, penjaga yang sedari tadi memegangi mesra tangan pria itu menjadi gusar dalam hatinya. Berpikir, apakah orang-orang akan menganggap dirinya sebagai pengadil yang tidak becus."
+            </blockquote>
+
+            <div class="essay-prose">
+                <h3>1. Delusi Romantisisme Fiksi dalam Realitas Kasar</h3>
+                <p>Cerpen <em>Pemustaka yang Bijak</em> menghadirkan mikrokosmos perpustakaan sebagai panggung satir atas fenomena masyarakat kontemporer. Tokoh remaja berambut belah tengah merepresentasikan pembaca fiksi pemula yang mengidap ilusi pahlawan: menganggap dirinya juru selamat moral berkat novel <em>zero to hero</em> yang dibacanya. Ia melontarkan asumsi tanpa bukti mengenai motif pencuri ("bisa saja dia kelaparan atau ada anak istri yang menunggu") demi memuaskan kebutuhan narsistiknya untuk tampil bijaksana di ruang publik.</p>
+
+                <h3>2. Otoritas yang Disandera Persepsi Massa</h3>
+                <p>Karakter penjaga perpustakaan yang berperut buncit memperlihatkan kelemahan institusi penegak aturan. Tindakannya berdeham dan merapikan kerah baju yang sudah rapi mencerminkan kegugupan internal. Otoritasnya tidak digerakkan oleh prinsip keadilan hukum objektif, melainkan oleh ketakutan primitif akan tatapan penghakiman orang banyak. Netralitas palsu dipilih sebagai jalan keluar paling aman bagi posisinya: korban yang membela hak milik adiknya justru dijatuhi sanksi yang sama beratnya dengan pelaku pencurian.</p>
+
+                <h3>3. Apatisme Mayoritas yang Membisu</h3>
+                <p>Paragraf penutup menyingkap satire paling pedas: masyarakat sekitar yang terkunci oleh "segel bukan urusan kami". Cerpen ini menyadarkan kita bahwa ketidakadilan sosial sering kali langgeng bukan semata-mata karena adanya pelaku kejahatan, melainkan akibat aliansi tak kasat mata antara pengkhotbah moral tanpa tanggung jawab, penegak aturan yang bimbang, dan saksi mata yang memilih acuh demi kenyamanan pribadi.</p>
+            </div>
+
+            <footer class="essay-footer-cta">
+                <a href="pemustaka-yang-bijak.html" class="btn-read-story">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Baca Naskah Cerpen Pemustaka yang Bijak
+                </a>
+                <a href="#" class="btn-back-to-top">↑ Kembali ke Atas</a>
+            </footer>
+        </article>
+
+        <!-- Esai 2: Pengakuan -->
+        <article class="essay-article" id="esai-pengakuan" style="--essay-accent: #3a5a8a; --essay-tint: rgba(58, 90, 138, 0.08);">
+            <header class="essay-article-header">
+                <span class="essay-category-tag" style="background: rgba(58, 90, 138, 0.1); color: #3a5a8a;">
+                    Roman Psikologis • Eksistensialisme
+                </span>
+                <h2 class="essay-title">Duri Eksistensial Meruem: Antara Dahaga Cinta dan Paranoia Ketaklayakan</h2>
+                <div class="essay-story-ref">
+                    <span>Membahas naskah cerpen:</span>
+                    <strong><a href="pengakuan.html" style="color: inherit; text-decoration: underline;">Pengakuan</a></strong>
+                </div>
+            </header>
+
+            <div class="essay-summary-grid">
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Premis Kunci
+                    </div>
+                    <p class="summary-value">Pengakuan batin seorang pemuda penyendiri yang dihantui rasa benci diri saat dicintai oleh perempuan luar biasa.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        Fokus Psikologis
+                    </div>
+                    <p class="summary-value"><em>Imposter syndrome</em> radikal, ketakutan akan kerapuhan emosi, dan kecurigaan transaksional.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m12 6 2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4Z"/></svg>
+                        Simbol Sentral
+                    </div>
+                    <p class="summary-value">Lonceng Jam Besar Rosalt sebagai pengingat kefanaan (<em>memento mori</em>).</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>
+                        Tragedi Utama
+                    </div>
+                    <p class="summary-value">Ketidakmampuan menerima bahwa dirinya berhak bahagia tanpa syarat.</p>
+                </div>
+            </div>
+
+            <blockquote class="essay-key-quote">
+                "Tahukah kamu mengapa jam itu selalu berbunyi dengan suara yang sangat keras? Itu untuk memperingatkan siapapun yang mendengarnya bahwa waktu mereka tidak akan bertahan selamanya."
+            </blockquote>
+
+            <div class="essay-prose">
+                <h3>1. Anatomi Rasa Benci Diri (Self-Loathing)</h3>
+                <p>Naskah cerpen <em>Pengakuan</em> dibangun di atas struktur monolog epistolari yang membedah gejolak neurotik Meruem. Meskipun menjabat sebagai Wakil Ketua Anti-Theis yang dielu-elukan, Meruem memandang keberhasilannya sebagai hasil tipu daya retorika semata. Ketika Zevanka—sosok perempuan cerdas dan tulus—datang mendekat, mekanisme pertahanan jiwa Meruem justru menolak cinta tersebut. Ia menganggap dirinya bagai "cacing di dalam tanah", kontras dengan Zevanka yang ia deifikasi sebagai "bunga di puncak gunung".</p>
+
+                <h3>2. Ruang Liminal Kedai Reivjyk vs Dunia Luar</h3>
+                <p>Pertemuan mereka di kedai makanan berkuah dekat stasiun Reivjyk menjadi titik balik psikologis. Kedai tua yang aromatik dan terisolasi dari keriuhan berfungsi sebagai ruang pelarian di mana waktu melambat. Bagi Meruem, momen semangkuk riyad pedas dan teh daun saneza adalah oase langka dalam hidupnya yang selama 22 tahun gersang. Di sana, percakapan mereka tidak lagi berurusan dengan intrik politik kota Devan, melainkan kebutuhan dasar manusia untuk didengar dan dimengerti.</p>
+
+                <h3>3. Paranoia sebagai Mekanisme Bertahan</h3>
+                <p>Tragedi paling mendalam dalam cerpen ini muncul pada sekuens penutup. Ketika hubungan mereka semakin intim, setan keraguan dalam kepala Meruem justru bangkit: apakah Zevanka benar-benar tulus atau sekadar memanfaatkan reputasinya demi agenda politis? Ketidakmampuan Meruem mempercayai kebaikan murni mencerminkan luka psikis orang-orang modern yang terbiasa hidup dalam sistem transaksional. Cerita ini menjadi potret menyayat hati tentang betapa sulitnya seseorang menerima cinta ketika ia terlanjur membenci dirinya sendiri.</p>
+            </div>
+
+            <footer class="essay-footer-cta">
+                <a href="pengakuan.html" class="btn-read-story">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Baca Naskah Cerpen Pengakuan
+                </a>
+                <a href="#" class="btn-back-to-top">↑ Kembali ke Atas</a>
+            </footer>
+        </article>
+
+        <!-- Esai 3: Perempuan di Pinggir Jalan -->
+        <article class="essay-article" id="esai-perempuan" style="--essay-accent: #0f766e; --essay-tint: rgba(15, 118, 110, 0.08);">
+            <header class="essay-article-header">
+                <span class="essay-category-tag" style="background: rgba(15, 118, 110, 0.1); color: #0f766e;">
+                    Realitas Urban • Supranatural
+                </span>
+                <h2 class="essay-title">Maut Tanpa Peringatan: Humor Getir Kelas Bawah dan Utang Hidup yang Menggantung</h2>
+                <div class="essay-story-ref">
+                    <span>Membahas naskah cerpen:</span>
+                    <strong><a href="perempuan-di-pinggir-jalan.html" style="color: inherit; text-decoration: underline;">Perempuan di Pinggir Jalan</a></strong>
+                </div>
+            </header>
+
+            <div class="essay-summary-grid">
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 10.9 2 11.2 2 11.5V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+                        Premis Kunci
+                    </div>
+                    <p class="summary-value">Obrolan santai pengemudi ojek daring dan pencari kerja di tepi aspal yang berujung kesadaran atas kematian mendadak.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="m17 5-5-3-5 3"/><path d="m17 19-5 3-5-3"/></svg>
+                        Fokus Sosial
+                    </div>
+                    <p class="summary-value">Prekaritas ekonomi generasi muda, beban menafkahi keluarga, dan komedi sebagai tameng bertahan hidup.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                        Simbol Sentral
+                    </div>
+                    <p class="summary-value">Boneka kelinci untuk adik kecil sebagai sisa wujud kasih sayang yang tak sempat terantar.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+                        Pukulan Emosional
+                    </div>
+                    <p class="summary-value">Kepergian di usia 18 tahun dengan impian sederhana yang belum terwujud.</p>
+                </div>
+            </div>
+
+            <blockquote class="essay-key-quote">
+                "Aku belum melihat adikku lulus SD, nanti SMP, sampai memakai baju toga. Aku belum bisa membeli sepatu yang aku idam-idamkan dari awal kuliah. Aku belum sukses seperti yang dicita-citakan Ibu. Belum. Tapi, takdir tidak mengerti yang kumau."
+            </blockquote>
+
+            <div class="essay-prose">
+                <h3>1. Humor Sebagai Penawar Kerasnya Hidup</h3>
+                <p>Babak awal cerpen <em>Perempuan di Pinggir Jalan</em> diselimuti humor renyah khas kelas pekerja. Lelucon mengenai "ketiak sopir tidak sopan", harga BBM yang meroket, dan sindiran terhadap ocehan politisi bukan sekadar pemanis dialog, melainkan strategi bertahan hidup (*coping mechanism*). Karakter Doni dan Rina menertawakan kesulitan hidup mereka karena dalam realitas yang mencekik, tawa adalah satu-satunya barang mewah yang masih bisa mereka nikmati secara cuma-cuma.</p>
+
+                <h3>2. Pembalikan Plot Tanpa Sensasionalisme</h3>
+                <p>Kekuatan cerpen ini bertumpu pada pergeseran nada narasi yang dieksekusi secara dingin. Masuknya tukang es cincau yang menyangka Rina berbicara sendiri menjadi pemicu keretakan realitas. Ketika tangan Doni menembus pundak Rina, pembaca tersentak menyadari bahwa narator yang sejak tadi mengajak bercanda adalah arwah yang baru tewas sepuluh menit lalu akibat tabrakan truk. Kemampuan Rina melihat arwah tidak diperlakukan sebagai mistik menakutkan, melainkan peran welas asih bagi jiwa yang membutuhkan perantara salam terakhir.</p>
+
+                <h3>3. Beban Tanggung Jawab yang Menggantung</h3>
+                <p>Hal paling memilukan saat Doni menyadari dirinya tewas bukan ketakutan akan neraka atau siksa kubur, melainkan daftar tanggung jawab hidup yang belum lunas. Di usia 18 tahun, ia masih memikirkan nasib adiknya yang masih SD, sepatu kuliah impiannya, dan harapan almarhumah ibunya. Boneka kelinci yang kini berada di tangan Rina menjadi simbol fisik cinta keluarga yang melampaui batas kematian. Cerpen ini merekam rapuhnya nasib jutaan pekerja muda di jalanan kota besar yang bertaruh nyawa setiap hari demi menyambung hidup orang tercinta.</p>
+            </div>
+
+            <footer class="essay-footer-cta">
+                <a href="perempuan-di-pinggir-jalan.html" class="btn-read-story">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Baca Naskah Cerpen Perempuan di Pinggir Jalan
+                </a>
+                <a href="#" class="btn-back-to-top">↑ Kembali ke Atas</a>
+            </footer>
+        </article>
+
+        <!-- Esai 4: Satu Hari Seribu Kali -->
+        <article class="essay-article" id="esai-seribu-kali" style="--essay-accent: #c026d3; --essay-tint: rgba(192, 38, 211, 0.08);">
+            <header class="essay-article-header">
+                <span class="essay-category-tag" style="background: rgba(192, 38, 211, 0.1); color: #c026d3;">
+                    Romansa Remaja • Terapi Emosional
+                </span>
+                <h2 class="essay-title">Menyembuhkan Phobia Melalui Kejujuran Tanpa Pretensi</h2>
+                <div class="essay-story-ref">
+                    <span>Membahas naskah cerpen:</span>
+                    <strong><a href="satu-hari-seribu-kali.html" style="color: inherit; text-decoration: underline;">Satu Hari Seribu Kali</a></strong>
+                </div>
+            </header>
+
+            <div class="essay-summary-grid">
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        Premis Kunci
+                    </div>
+                    <p class="summary-value">Pemuda yang mual di dekat perempuan mencoba jasa pacar sewaan dan menemukan pasangan hidup sejati.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-2h2zm0-4h-2V7h2z"/></svg>
+                        Fokus Psikologis
+                    </div>
+                    <p class="summary-value">Trauma perpisahan keluarga masa kecil yang terkonversi menjadi fobia somatik.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Dinamika Relasi
+                    </div>
+                    <p class="summary-value">Dari kontrak komersial buatan menuju keintiman organik yang menyembuhkan.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                        Arti Judul
+                    </div>
+                    <p class="summary-value">Kerinduan mengulang titik awal kesembuhan batin hingga seribu kali perulangan.</p>
+                </div>
+            </div>
+
+            <blockquote class="essay-key-quote">
+                "Dan begitulah aku mengenal istriku—Luna, pacar sewaan yang tak pernah terasa seperti sewaan. Hari itu, mungkin cuma satu hari biasa bagi orang lain, tapi untukku, itulah hari pertama aku merasa… sembuh."
+            </blockquote>
+
+            <div class="essay-prose">
+                <h3>1. Manifestasi Somatis dari Luka Pengabaian</h3>
+                <p>Dalam <em>Satu Hari Seribu Kali</em>, ketakutan Rayyan terhadap lawan jenis bukan sekadar rasa malu remaja biasa, melainkan respon psikosomatis yang berakar pada trauma usia enam tahun saat ayah dan ibunya berpisah. Kepergian sang ibu menciptakan benteng bawah sadar: kedekatan fisik dengan perempuan diidentifikasi otaknya sebagai ancaman penolakan, yang memicu rasa mual seketika. Sekolah khusus laki-laki Arya Pratama mempertebal dinding isolasi tersebut.</p>
+
+                <h3>2. Kekuatan Spontanitas Luna</h3>
+                <p>Mengapa Rayyan tidak mual saat berada di dekat Luna? Jawabannya terletak pada ketiadaan manipulasi dan kepalsuan dalam diri Luna. Luna tidak bersikap anggun artifisial sebagaimana stereotip pacar sewaan komersial. Ia berani membeli pembalut diskon di hadapan klien pertamanya, tertawa terbahak-bahak saat berbohong soal ibunya yang sakit, celemotan saat makan miso ramen pedas, dan berteriak heboh saat menonton film monster di bioskop. Sikap blak-blakan ini meredakan alarm bahaya di otak Rayyan: Luna adalah manusia nyata yang cacat dan jujur, bukan ilusi yang menuntut kesempurnaan.</p>
+
+                <h3>3. Romantisisme yang Membumi</h3>
+                <p>Penyelesaian cerita ini menghadirkan kehangatan yang melegakan. Kesalahan ucap Rayyan saat mengajak Luna "ngepet lagi" alih-alih "kencan lagi" di halte TransJakarta Kampung Melayu justru menjadi perekat hubungan mereka. Cerita ini membuktikan bahwa cinta yang mampu menyembuhkan tidak lahir dari kemewahan atau skenario romantis yang dibuat-buat, melainkan dari keberanian dua orang untuk tampil apa adanya tanpa takut dihakimi.</p>
+            </div>
+
+            <footer class="essay-footer-cta">
+                <a href="satu-hari-seribu-kali.html" class="btn-read-story">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Baca Naskah Cerpen Satu Hari Seribu Kali
+                </a>
+                <a href="#" class="btn-back-to-top">↑ Kembali ke Atas</a>
+            </footer>
+        </article>
+
+        <!-- Esai 5: Serigala Terkutuk -->
+        <article class="essay-article" id="esai-serigala" style="--essay-accent: #64748b; --essay-tint: rgba(100, 116, 139, 0.1);">
+            <header class="essay-article-header">
+                <span class="essay-category-tag" style="background: rgba(100, 116, 139, 0.1); color: #64748b;">
+                    Fabel Filosofis • Kritik Totalitarianisme
+                </span>
+                <h2 class="essay-title">Pembungkaman Nalar Demi Stabilitas: Fabel Politik tentang Dogmatisme dan Konformitas</h2>
+                <div class="essay-story-ref">
+                    <span>Membahas naskah cerpen:</span>
+                    <strong><a href="serigala-terkutuk.html" style="color: inherit; text-decoration: underline;">Serigala Terkutuk</a></strong>
+                </div>
+            </header>
+
+            <div class="essay-summary-grid">
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                        Premis Kunci
+                    </div>
+                    <p class="summary-value">Anak serigala yang mempertanyakan kewajiban berterima kasih pada sang dewi diterkam mati oleh tetua kawanan.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                        Fokus Filosofis
+                    </div>
+                    <p class="summary-value">Runtuhnya penalaran rasional di hadapan ortodoksi kekuasaan tirani.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg>
+                        Simbol Sentral
+                    </div>
+                    <p class="summary-value">Dewi Bulan sebagai berhala legitimasi kekuasaan para tetua.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" x2="12" y1="2" y2="12"/></svg>
+                        Ironi Akhir
+                    </div>
+                    <p class="summary-value">Kemakmuran semu yang dibangun di atas pembungkaman generasi pemikir bebas.</p>
+                </div>
+            </div>
+
+            <blockquote class="essay-key-quote">
+                "Sejak saat itu, tidak pernah ada yang bertanya hal apapun terkait Dewi Bulan. Bangsa serigala hidup makmur."
+            </blockquote>
+
+            <div class="essay-prose">
+                <h3>1. Kemurnian Nalar Anak yang Mengancam Status Quo</h3>
+                <p>Meskipun ringkas (kurang dari 200 kata), <em>Serigala Terkutuk</em> memiliki ketajaman alegori politik setara fabel klasik George Orwell. Pertanyaan anak serigala sangat murni dan logis: jika ayahnya merawatnya karena tanggung jawab, bukankah Dewi Bulan merawat bangsanya karena kewajiban sebagai pencipta? Mengapa harus menyembah sesuatu yang sekadar menunaikan kodratnya? Logika sederhana ini berbahaya bagi tetua serigala, karena meruntuhkan hierarki mistifikasi yang selama ini menjadi sumber kendali atas kawanan.</p>
+
+                <h3>2. Ayah yang Membisu sebagai Cermin Mayoritas Pasif</h3>
+                <p>Bagian paling mengerikan dari adegan penerkaman bukan kebrutalan sang tetua, melainkan reaksi sang ayah: "sementara sang ayah diam bergeming". Tokoh ayah mewakili warga biasa dalam rezim otoriter. Ia mencintai anaknya, namun rasa takut terhadap otoritas membuatnya membeku dan membiarkan darah dagingnya sendiri dieksekusi demi menjaga kelangsungan hidupnya sendiri. Di sini digambarkan bagaimana kediktatoran menuntut pengorbanan nurani paling intim dari rakyatnya.</p>
+
+                <h3>3. Ilusi Kemakmuran Tanpa Kebebasan Berpikir</h3>
+                <p>Kalimat penutup cerita ini ditulis dengan nada dingin yang sarat ironi: <em>"Bangsa serigala hidup makmur."</em> Penulis sengaja menutup cerita dengan kalimat tersebut untuk menampar pembaca. Kemakmuran materi yang dicapai melalui pemusnahan nalar kritis dan penyeragaman pikiran pada hakikatnya bukanlah kehidupan, melainkan kuburan masal bagi martabat intelektual. Fabel ini menjadi peringatan abadi bagi masyarakat mana pun yang menukar kebebasan bertanya dengan ilusi stabilitas.</p>
+            </div>
+
+            <footer class="essay-footer-cta">
+                <a href="serigala-terkutuk.html" class="btn-read-story">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Baca Naskah Cerpen Serigala Terkutuk
+                </a>
+                <a href="#" class="btn-back-to-top">↑ Kembali ke Atas</a>
+            </footer>
+        </article>
+
+        <!-- Esai 6: Tias Itu Orang Baik -->
+        <article class="essay-article" id="esai-tias" style="--essay-accent: #c2410c; --essay-tint: rgba(194, 65, 12, 0.08);">
+            <header class="essay-article-header">
+                <span class="essay-category-tag" style="background: rgba(194, 65, 12, 0.1); color: #c2410c;">
+                    Kisah Kehidupan • Etika Moral
+                </span>
+                <h2 class="essay-title">Membongkar Teori Kebaikan: Dari Khotbah Normatif ke Daster Robek Ibu</h2>
+                <div class="essay-story-ref">
+                    <span>Membahas naskah cerpen:</span>
+                    <strong><a href="tias-itu-orang-baik.html" style="color: inherit; text-decoration: underline;">Tias Itu Orang Baik</a></strong>
+                </div>
+            </header>
+
+            <div class="essay-summary-grid">
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        Premis Kunci
+                    </div>
+                    <p class="summary-value">Pencarian definisi orang baik oleh anak SD juara kelas yang menolak jawaban klise dari sekolah dan masjid.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                        Fokus Eksplorasi
+                    </div>
+                    <p class="summary-value">Dilema etika moral, batas antara kewajiban vs kebaikan, dan batas keadilan individual.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                        Simbol Sentral
+                    </div>
+                    <p class="summary-value">Daster robek di dekat lutut dan cucian baju tetangga sebagai wujud cinta nyata.</p>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        Resolusi Utama
+                    </div>
+                    <p class="summary-value">Kebaikan tidak didebatkan di atas kertas, melainkan dijalani dalam laku pengorbanan sunyi.</p>
+                </div>
+            </div>
+
+            <blockquote class="essay-key-quote">
+                "Jangan mendebati orang baik itu seperti apa, tapi jadilah orang baik. Jadi kamu nggak perlu tahu orang baik itu seperti apa untuk jadi orang baik. Yang penting, kita jadi orang baik."
+            </blockquote>
+
+            <div class="essay-prose">
+                <h3>1. Kebuntuan Dogma Teori Moral</h3>
+                <p>Dalam <em>Tias Itu Orang Baik</em>, narasi berputar pada kegelisahan kognitif Tias. Selama lima tahun berturut-turut menjadi juara kelas di bangku sekolah dasar, ia terbiasa memecahkan soal eksak dengan jawaban pasti. Namun pertanyaan Mister Henri—"Seperti apa orang baik itu?"—meruntuhkan kepastian tersebut. Jawaban teman sekelasnya terlalu kekanak-kanakan (es krim, kejujuran), sedangkan jawaban Ustadz Adi mengenai ketaatan mutlak langsung runtuh saat Tias mengonfrontasinya dengan realitas bom bunuh diri atas nama agama.</p>
+
+                <h3>2. Dialektika di Warkop Bang Aji</h3>
+                <p>Warkop Bang Aji menjadi arena dialektika filsafat rakyat. Televisi tabung yang menayangkan pandangan Sujiwo Tejo menyodorkan paradoks: orang baik adalah orang yang melupakan kebaikannya karena menganggapnya kewajiban, namun meratapi kesalahannya. Menariknya, Bang Aji—penjaga warkop sederhana yang sedang mengelap piring—tidak serta merta menelan pendapat intelektual itu mentah-mentah. Bang Aji menegaskan bahwa manusia pasti berbuat salah; menyangkal kesalahan berarti menyangkal kodrat manusia. Solusi Bang Aji sangat pragmatis: berhenti berdebat tentang definisi orang baik, mulailah menjadi orang baik.</p>
+
+                <h3>3. Kebaikan Sejati di Kamar Bersahaja</h3>
+                <p>Jawaban final atas teka-teki moral Tias tidak ditemukan di ruang kelas, mimbar pengajian, ataupun siaran televisi. Jawaban itu terbaring sunyi di ranjang merah muda di rumahnya: sosok ibunya yang tertidur lelap setelah seharian menggosok baju cucian tetangga. Ibu yang membelikannya kaos Ultraman meski dasternya sendiri robek di dekat lutut. Tias menyadari bahwa kebaikan sejati tidak butuh pembenaran dalil atau definisi di atas kertas. Kebaikan adalah cinta tulus yang bersedia berkorban tanpa menuntut tepuk tangan.</p>
+            </div>
+
+            <footer class="essay-footer-cta">
+                <a href="tias-itu-orang-baik.html" class="btn-read-story">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Baca Naskah Cerpen Tias Itu Orang Baik
+                </a>
+                <a href="#" class="btn-back-to-top">↑ Kembali ke Atas</a>
+            </footer>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Neilo Archive</strong> — Ruang Fiksi Pribadi.</p>
+            <p>Ditulis dan dirawat oleh Neilo Febrian Utomo.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,26 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satu Hari Seribu Kali</title>
-
-    <!-- Mengambil font 'Lora' dari Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <title>Satu Hari Seribu Kali - Neilo Archive</title>
+    <meta name="description" content="Cerpen Satu Hari Seribu Kali karya Neilo Febrian Utomo. Kisah Rayyan yang takut perempuan mencoba kencan pacar sewaan yang berujung pada cinta sejatinya.">
+    
+    <!-- Google Fonts: Lora & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav style="margin-bottom: 30px;">
-        <a href="./" class="read-more">&larr; Kembali ke Beranda</a>
+<body data-story="seribu-kali">
+    <!-- Indikator Kemajuan Membaca -->
+    <div id="reading-progress" aria-hidden="true"></div>
+
+    <!-- Navigasi & Toolbar Mode Baca -->
+    <nav class="site-nav" aria-label="Navigasi Halaman">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                <span>Ruang Fiksi</span>
+            </a>
+            
+            <div class="nav-actions">
+                <div class="font-size-group" title="Ubah Ukuran Teks">
+                    <button id="font-decrease-btn" type="button" aria-label="Kecilkan Teks">A-</button>
+                    <button id="font-increase-btn" type="button" aria-label="Besarkan Teks">A+</button>
+                </div>
+                
+                <button id="theme-toggle-btn" class="nav-btn" type="button" aria-label="Ganti Tema">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <span class="theme-label">Tema</span>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <article style="border: none; background: transparent; padding: 0px; box-shadow: none;">
-            <h1 style="font-size: 2rem; margin-bottom: 10px; color: #1a1a1a;">Satu Hari Seribu Kali</h1>
-            <p style="color: #666;font-size: 0.95rem; margin-bottom: 30px;">31 Juli 2026</p>
+    <!-- Konten Utama Cerpen -->
+    <main class="story-page-wrapper">
+        <article>
+            <!-- Header Cerpen -->
+            <header class="story-hero">
+                <div class="story-theme-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    Romansa Remaja • Komedi Hangat
+                </div>
+                
+                <h1 class="story-title">Satu Hari Seribu Kali</h1>
+                
+                <div class="story-meta-row">
+                    <span class="story-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Waktu Baca: ~12 Menit
+                    </span>
+                    <span>•</span>
+                    <span class="story-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        2.440 Kata
+                    </span>
+                    <span>•</span>
+                    <span class="story-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        31 Juli 2026
+                    </span>
+                </div>
+                
+                <blockquote class="story-teaser-quote">
+                    "Dan begitulah aku mengenal istriku—Luna, pacar sewaan yang tak pernah terasa seperti sewaan. Hari itu, mungkin cuma satu hari biasa bagi orang lain, tapi untukku, itulah hari pertama aku merasa… sembuh."
+                </blockquote>
+            </header>
+
+            <!-- Isi Teks Cerpen -->
             <div class="cerpen-content">
-                <p>Setiap orang pasti memiliki ketakutan. Seperti temanku Abdul yang biasa kupanggil 'Panjul', dia takut dengan guru matematika kami, Bu Desi namanya. Atau Bondan si tampan, langsung kabur jika ada di antara kami yang memainkan serangga. Termasuk aku, aku juga punya ketakutan: aku takut dengan perempuan.</p>
+                <p><span class="dropcap">S</span>etiap orang pasti memiliki ketakutan. Seperti temanku Abdul yang biasa kupanggil 'Panjul', dia takut dengan guru matematika kami, Bu Desi namanya. Atau Bondan si tampan, langsung kabur jika ada di antara kami yang memainkan serangga. Termasuk aku, aku juga punya ketakutan: aku takut dengan perempuan.</p>
                 <p>Memang aneh sih, mana ada laki-laki yang takut dengan perempuan. Tapi aku pengecualiannya. Saking takutnya dengan perempuan, aku akan mual jika di dekat mereka. Makanya ayahku menyekolahkanku di SMA khusus laki-laki, Sekolah Arya Pratama namanya.</p>
                 <p>Sejak ayahku berpisah dengan ibuku saat aku berumur enam tahun, aku tidak pernah lagi berinteraksi secara sengaja dengan perempuan, kecuali dengan Bu Guru sekolahku atau kasir Indomaret dekat rumahku.</p>
                 <p>"Eh Ray," panggil Panjul kepadaku. "Lu mau sampe kapan begini terus? Emang lu ga mikir pas lu kerja nanti bisa aja bos lu perempuan atau klien lu perempuan? Ayolah bro, ga semua orang di bumi ini laki-laki," ujar Panjul sok bijak, menyebalkan memang.</p>
@@ -103,15 +158,58 @@
                 <p>"Aku tau kok Rayyan. Aku mau kok ngedate lagi sama kamu," ucapnya, kali ini bukan dengan seringai menyebalkan, tapi senyuman manis di wajahnya.</p>
                 <p>Aku pun ikut tersenyum tanpa sadar. Aku senang sekali. Mungkin itu sebabnya jantungku berdebar cepat saat itu, padahal sebelumnya belum pernah, atau sebelum bertemu Luna seingatku.</p>
                 <p>Aku bisa membayangkan betapa lebarnya senyumanku saat itu. Mas-mas kasir Roti 'O dan mas-mas karyawan TransJakarta, menjadi saksi cintaku malam itu.</p>
-                <p>Dan begitulah aku mengenal istriku—Luna, pacar sewaan yang tak pernah terasa seperti sewaan. Hari itu, mungkin cuma satu hari biasa bagi orang lain, tapi untukku, itulah hari pertama aku merasa… sembuh.</p>
-                <p>Sembuh dari takutku, dari lukaku, dari sepi yang tak pernah sempat kusadari selama ini.</p>
+
+                <div class="story-highlight-box">
+                    <p>Dan begitulah aku mengenal istriku—Luna, pacar sewaan yang tak pernah terasa seperti sewaan. Hari itu, mungkin cuma satu hari biasa bagi orang lain, tapi untukku, itulah hari pertama aku merasa… sembuh.</p>
+                    <p style="margin-top: 14px;">Sembuh dari takutku, dari lukaku, dari sepi yang tak pernah sempat kusadari selama ini.</p>
+                </div>
+
                 <p>Kadang aku bertanya-tanya, bagaimana jadinya jika aku tak mengiyakan tawaran Panjul dan Bondan waktu itu. Mungkin aku masih tetap Rayyan yang mual tiap kali lihat perempuan. Atau mungkin… aku tidak akan pernah tahu rasanya jatuh cinta pada seseorang yang tak perlu jadi orang lain hanya untuk membuatku nyaman.</p>
-                <p>Sekarang, setiap kali aku melihat Luna menyisir rambutnya di depan kaca, atau tertawa saat nonton film yang dia suka. Ya, termasuk film konyol semacam Wah-Wah, Kaget!, aku selalu teringat hari itu.</p>
+                <p>Sekarang, setiap kali aku melihat Luna menyisir rambutnya di depan kaca, atau tertawa saat nonton film yang dia suka. Ya, termasuk film konyol semacam <em>Wah-Wah, Kaget!</em>, aku selalu teringat hari itu.</p>
                 <p>Hari di mana semuanya bermula.</p>
                 <p>Dan jika boleh memilih, aku ingin mengulang hari itu. Sampai seribu kali.</p>
             </div>
-            
+
+            <div class="story-end-marker" aria-hidden="true">❦ ❦ ❦</div>
+
+            <!-- Bar Interaksi -->
+            <div class="story-interaction-bar">
+                <button class="btn-share-link" type="button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
+                    Salin Tautan Cerita
+                </button>
+                <a href="index.html" class="nav-btn">Kembali ke Daftar Cerpen</a>
+            </div>
+
+            <!-- Navigasi Cerita Sebelumnya & Selanjutnya -->
+            <nav class="story-nav-grid" aria-label="Navigasi Cerita">
+                <a href="perempuan-di-pinggir-jalan.html" class="nav-card prev">
+                    <span class="nav-card-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                        Cerpen Sebelumnya
+                    </span>
+                    <span class="nav-card-title">Perempuan di Pinggir Jalan</span>
+                </a>
+                
+                <a href="serigala-terkutuk.html" class="nav-card next">
+                    <span class="nav-card-label">
+                        Cerpen Selanjutnya
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </span>
+                    <span class="nav-card-title">Serigala Terkutuk</span>
+                </a>
+            </nav>
         </article>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Neilo Archive</strong> — Ruang Fiksi Pribadi.</p>
+            <p>Ditulis dan dirawat oleh Neilo Febrian Utomo.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

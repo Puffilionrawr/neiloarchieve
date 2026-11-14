@@ -1,114 +1,822 @@
-/* Pengaturan dasar halaman */
+/* ==========================================================================
+   Ruang Fiksi - Neilo Archive Stylesheet
+   Sistem Desain Khusus Cerita Fiksi: Tipografi Nyaman, Mode Baca, & Aksen Unik
+   ========================================================================== */
+
+/* 1. VARIABEL & TEMA WARNA */
+:root {
+    --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    
+    /* Default Mode: Terang (Clean Light Paper) */
+    --bg-page: #fbf9f5;
+    --bg-surface: #ffffff;
+    --bg-surface-subtle: #f4efe6;
+    --bg-accent-subtle: rgba(0, 0, 0, 0.04);
+    
+    --text-primary: #1f2328;
+    --text-secondary: #4b525d;
+    --text-muted: #767d8a;
+    
+    --border-color: #e6dfd5;
+    --border-subtle: #eee8df;
+    
+    --accent-default: #245782;
+    --accent-hover: #173b5c;
+    --accent-light: rgba(36, 87, 130, 0.08);
+    
+    --story-accent: #245782;
+    --story-tint: rgba(36, 87, 130, 0.06);
+
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.05);
+    
+    --content-width: 720px;
+    --container-width: 900px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    
+    --font-size-base: 1.125rem; /* 18px */
+    --line-height-prose: 1.85;
+}
+
+/* Tema: Sepia (Kertas Buku Klasik) */
+[data-theme="sepia"] {
+    --bg-page: #f4eedb;
+    --bg-surface: #fcf6e7;
+    --bg-surface-subtle: #e9e0c7;
+    --bg-accent-subtle: rgba(74, 55, 34, 0.05);
+    
+    --text-primary: #3c2e1f;
+    --text-secondary: #5f4a33;
+    --text-muted: #8c7356;
+    
+    --border-color: #dfd2b5;
+    --border-subtle: #e8dec7;
+    
+    --accent-default: #8a5323;
+    --accent-hover: #683d16;
+    --accent-light: rgba(138, 83, 35, 0.1);
+    
+    --shadow-sm: 0 2px 6px rgba(60, 46, 31, 0.05);
+    --shadow-md: 0 8px 20px rgba(60, 46, 31, 0.08);
+}
+
+/* Tema: Gelap (OLED/Midnight Reading) */
+[data-theme="dark"] {
+    --bg-page: #131518;
+    --bg-surface: #1b1e23;
+    --bg-surface-subtle: #242830;
+    --bg-accent-subtle: rgba(255, 255, 255, 0.05);
+    
+    --text-primary: #eceff4;
+    --text-secondary: #b6beca;
+    --text-muted: #798393;
+    
+    --border-color: #2b303b;
+    --border-subtle: #21252d;
+    
+    --accent-default: #58a6ff;
+    --accent-hover: #79b8ff;
+    --accent-light: rgba(88, 166, 255, 0.12);
+    
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Aksen Warna Berdasarkan Cerita */
+body[data-story="pemustaka"] {
+    --story-accent: #2d6a4f;
+    --story-tint: rgba(45, 106, 79, 0.08);
+}
+body[data-story="pengakuan"] {
+    --story-accent: #3a5a8a;
+    --story-tint: rgba(58, 90, 138, 0.08);
+}
+body[data-story="perempuan"] {
+    --story-accent: #0f766e;
+    --story-tint: rgba(15, 118, 110, 0.08);
+}
+body[data-story="seribu-kali"] {
+    --story-accent: #c026d3;
+    --story-tint: rgba(192, 38, 211, 0.08);
+}
+body[data-story="serigala"] {
+    --story-accent: #64748b;
+    --story-tint: rgba(100, 116, 139, 0.1);
+}
+body[data-story="tias"] {
+    --story-accent: #c2410c;
+    --story-tint: rgba(194, 65, 12, 0.08);
+}
+
+/* Skala Ukuran Font Pembaca */
+html.font-sm { font-size: 15px; }
+html.font-md { font-size: 16px; }
+html.font-lg { font-size: 18px; }
+html.font-xl { font-size: 20px; }
+
+/* 2. PENGATURAN DASAR */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #fdfbf7;
-    color: #2c2c2c;
-    line-height: 1.6;
-    max-width: 800px; /* Batas mentok lebar untuk layar laptop */
-    width: 90%; /* Memberi sisa ruang kosong di sisi kiri-kanan layar HP */
-    margin: 0 auto;    /* Mendorong konten persis ke tengah layar */
-    padding: 40px 20px; /* Ruang kosong (padding) di tepi layar */
-}
-
-/* Bagian Header / Judul Utama Web */
-header {
-    border-bottom: 2px solid #e0dbd0;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-}
-
-header h1 {
-    margin: 0 0 10px 0;
-    font-size: 2.2rem;
-    color: #1a1a1a;
-}
-
-header p {
     margin: 0;
-    color: #666666;
-    font-size: 1.1rem;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    -webkit-font-smoothing: antialiased;
 }
 
-.header-cerpen {
+/* Scroll progress bar */
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--story-accent);
+    z-index: 1000;
+    transition: width 0.1s ease-out;
+}
+
+/* Container Pembungkus */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 3. NAVBAR & TOOLBAR MODE BACA */
+.site-nav {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-surface);
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    backdrop-filter: blur(8px);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.site-nav .container {
     display: flex;
-    justify-content: space-between; /* Mendorong judul mentok ke kiri, tanggal mentok ke kanan */
-    align-items: baseline; /* Menyamaratakan garis bawah teks agar sejajar rapi */
-    margin-bottom: 12px; /* Memberi jarak dengan paragraf sinopsis di bawahnya */
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
 }
 
-.header-cerpen h2 {
-    margin: 0; /* Wajib diubah menjadi 0 agar kotak flexbox tidak berantakan */
-}
-
-.header-cerpen time {
-    font-size: 0.9rem; /* Dibuat lebih kecil dari teks biasa (1rem) */
-    color: #666; /* Warna abu-abu agar mata pembaca tetap fokus pada judul utama */
-    margin-left: 15px; /* Memberi jarak aman jika layar ponsel sangat sempit dan teks bertabrakan */
-}
-
-/* Bagian Kotak Cerpen (Article Card) */
-article {
-    background: #ffffff;
-    padding: 24px;
-    border-radius: 8px;
-    border: 1px solid #eae5dc;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-}
-
-article h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-}
-
-article h2 a {
-    color: #1a1a1a;
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-primary);
     text-decoration: none;
+    letter-spacing: -0.01em;
 }
 
-/* Efek interaktif saat kursor menyentuh judul cerpen */
-article h2 a:hover {
-    color: #0066cc; 
-    text-decoration: underline;
+.nav-brand:hover {
+    color: var(--story-accent);
 }
 
-article p {
-    color: #444444;
+.nav-brand svg {
+    color: var(--story-accent);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-surface-subtle);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background: var(--bg-page);
+    color: var(--text-primary);
+    border-color: var(--story-accent);
+}
+
+.font-size-group {
+    display: inline-flex;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--bg-surface-subtle);
+}
+
+.font-size-group button {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.font-size-group button:hover {
+    background: var(--bg-page);
+    color: var(--text-primary);
+}
+
+.font-size-group button + button {
+    border-left: 1px solid var(--border-color);
+}
+
+/* 4. HEADER UTAMA BERANDA */
+.home-hero {
+    padding: 48px 0 32px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 36px;
+}
+
+.home-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    color: var(--accent-default);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     margin-bottom: 16px;
 }
 
-/* Tombol atau Tautan Baca Selengkapnya */
-article a.read-more {
-    display: inline-block;
-    font-weight: 600;
-    color: #0066cc;
-    text-decoration: none;
+.home-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 2.75rem;
+    margin: 0 0 12px 0;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    font-weight: 700;
 }
 
-article a.read-more:hover {
+.home-hero p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.home-stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.home-stats span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 5. FILTER KATEGORI BERANDA */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.filter-pill {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+    border-color: var(--accent-default);
+    color: var(--text-primary);
+}
+
+.filter-pill.active {
+    background: var(--accent-default);
+    border-color: var(--accent-default);
+    color: #ffffff;
+}
+
+/* 6. GRID KARTU CERPEN */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.story-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--card-accent, var(--story-accent));
+    opacity: 0.8;
+}
+
+.story-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--card-accent, var(--story-accent));
+}
+
+.story-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.story-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: var(--card-tint, var(--story-tint));
+    color: var(--card-accent, var(--story-accent));
+}
+
+.story-time-meta {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.story-card h2 {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    line-height: 1.35;
+    margin: 0 0 12px 0;
+}
+
+.story-card h2 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.story-card h2 a:hover {
+    color: var(--card-accent, var(--story-accent));
+}
+
+.story-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.story-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 16px;
+    margin-top: auto;
+}
+
+.story-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--card-accent, var(--story-accent));
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.story-read-link:hover {
+    gap: 10px;
     text-decoration: underline;
 }
 
-/* Styling khusus untuk isi cerpen */
+.story-date {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* 7. HALAMAN MEMBACA CERPEN */
+.story-page-wrapper {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 40px 20px 80px 20px;
+}
+
+/* Hero Cerpen */
+.story-hero {
+    text-align: center;
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.story-theme-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--story-tint);
+    color: var(--story-accent);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    border: 1px solid var(--story-tint);
+}
+
+.story-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin: 0 0 16px 0;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+.story-meta-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.story-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.story-teaser-quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 24px auto 0 auto;
+    max-width: 580px;
+    padding: 12px 20px;
+    background: var(--bg-surface-subtle);
+    border-left: 3px solid var(--story-accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    text-align: left;
+}
+
+/* 8. KONTEN TEKS CERPEN */
 .cerpen-content {
-    font-family: "Lora", "Georgia", serif; /* Gaya serif sangat cocok untuk cerita fiksi karena terasa seperti buku */
-    font-size: 1.125rem; /* Ukuran huruf 18px, pas untuk dibaca lama */
-    line-height: 1.8; /* Jarak antar baris longgar agar tidak sesak */
-    color: #2b2b2b;
+    font-family: var(--font-serif);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-prose);
+    color: var(--text-primary);
+    letter-spacing: 0.005em;
 }
 
 .cerpen-content p {
-    margin-bottom: 1.5rem; /* Jarak antar paragraf yang jelas */
-    text-align: justify; /* Meratakan kiri-kanan agar rapi seperti buku cetak */
+    margin-bottom: 1.7em;
+    text-align: left;
 }
 
-/* Membuat huruf pertama di paragraf awal menjadi besar */
-.cerpen-content p:first-of-type::first-letter {
-    font-size: 4rem;
+/* Dropcap elegan yang aman untuk tanda kutip */
+.dropcap {
     float: left;
-    line-height: 1;
-    padding-right: 8px;
-    font-weight: bold;
-    color: #1a1a1a;
+    font-size: 3.8rem;
+    line-height: 0.85;
+    padding-top: 4px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--story-accent);
 }
 
+/* Kutipan Khusus / Standout Highlight */
+.story-highlight-box {
+    margin: 36px 0;
+    padding: 24px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--story-accent);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.story-highlight-box p {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-primary);
+    font-size: 1.15rem;
+}
+
+/* Gaya Khusus: Surat di Cerpen Pengakuan */
+.letter-box {
+    margin: 36px 0;
+    padding: 30px;
+    background: var(--bg-surface);
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.letter-box::before {
+    content: "✉ Sepucuk Surat";
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--story-accent);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.letter-box p {
+    color: var(--text-secondary);
+}
+
+/* Gaya Khusus: Dialog Siaran TV / Talkshow */
+.broadcast-box {
+    margin: 36px 0;
+    padding: 24px;
+    background: var(--bg-surface-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    position: relative;
+}
+
+.broadcast-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--story-accent);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Pembatas Cerita Estetik */
+.story-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 16px;
+    color: var(--text-muted);
+}
+
+.story-divider::before,
+.story-divider::after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background: var(--border-color);
+}
+
+/* Akhir Cerita */
+.story-end-marker {
+    text-align: center;
+    margin: 48px 0 24px 0;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    letter-spacing: 0.3em;
+}
+
+/* 9. NAVIGASI ANTAR CERPEN & FOOTER */
+.story-interaction-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin: 40px 0;
+}
+
+.btn-share-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-share-link:hover {
+    border-color: var(--story-accent);
+    color: var(--story-accent);
+    background: var(--story-tint);
+}
+
+.story-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.nav-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.2s ease;
+}
+
+.nav-card:hover {
+    border-color: var(--story-accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-card-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-card.next {
+    text-align: right;
+}
+
+.nav-card.next .nav-card-label {
+    justify-content: flex-end;
+}
+
+.nav-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+/* 10. FOOTER SITUS */
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    padding: 36px 0;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.site-footer p {
+    margin: 6px 0;
+}
+
+.site-footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--story-accent);
+    text-decoration: underline;
+}
+
+/* 11. TOAST NOTIFICATION */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #1e293b;
+    color: #f8fafc;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* 12. RESPONSIVITAS MOBILE */
+@media (max-width: 640px) {
+    .home-hero h1 {
+        font-size: 2.1rem;
+    }
+    
+    .story-title {
+        font-size: 1.85rem;
+    }
+    
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-nav-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-card.next {
+        text-align: left;
+    }
+    
+    .nav-card.next .nav-card-label {
+        justify-content: flex-start;
+    }
+    
+    .nav-btn .theme-label {
+        display: none;
+    }
+    
+    .site-nav .container {
+        padding: 0 12px;
+    }
+    
+    .story-page-wrapper {
+        padding: 24px 14px 60px 14px;
+    }
+    
+    .dropcap {
+        font-size: 3.2rem;
+    }
+}

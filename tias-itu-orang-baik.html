@@ -1,26 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tias Itu Orang Baik</title>
-
-    <!-- Mengambil font 'Lora' dari Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tias Itu Orang Baik - Neilo Archive</title>
+    <meta name="description" content="Cerpen Tias Itu Orang Baik karya Neilo Febrian Utomo. Pencarian makna kebaikan oleh seorang anak SD yang membawanya kembali ke pelukan kasih sang ibu.">
+    
+    <!-- Google Fonts: Lora & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav style="margin-bottom: 30px;">
-        <a href="./" class="read-more">&larr; Kembali ke Beranda</a>
+<body data-story="tias">
+    <!-- Indikator Kemajuan Membaca -->
+    <div id="reading-progress" aria-hidden="true"></div>
+
+    <!-- Navigasi & Toolbar Mode Baca -->
+    <nav class="site-nav" aria-label="Navigasi Halaman">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                <span>Ruang Fiksi</span>
+            </a>
+            
+            <div class="nav-actions">
+                <div class="font-size-group" title="Ubah Ukuran Teks">
+                    <button id="font-decrease-btn" type="button" aria-label="Kecilkan Teks">A-</button>
+                    <button id="font-increase-btn" type="button" aria-label="Besarkan Teks">A+</button>
+                </div>
+                
+                <button id="theme-toggle-btn" class="nav-btn" type="button" aria-label="Ganti Tema">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <span class="theme-label">Tema</span>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <article style="border: none; background: transparent; padding: 0px; box-shadow: none;">
-            <h1 style="font-size: 2rem; margin-bottom: 10px; color: #1a1a1a;">Tias Itu Orang Baik</h1>
-            <p style="color: #666;font-size: 0.95rem; margin-bottom: 30px;">31 Juli 2026</p>
+    <!-- Konten Utama Cerpen -->
+    <main class="story-page-wrapper">
+        <article>
+            <!-- Header Cerpen -->
+            <header class="story-hero">
+                <div class="story-theme-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    Kisah Kehidupan • Kehangatan Keluarga
+                </div>
+                
+                <h1 class="story-title">Tias Itu Orang Baik</h1>
+                
+                <div class="story-meta-row">
+                    <span class="story-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Waktu Baca: ~11 Menit
+                    </span>
+                    <span>•</span>
+                    <span class="story-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        2.190 Kata
+                    </span>
+                    <span>•</span>
+                    <span class="story-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        31 Juli 2026
+                    </span>
+                </div>
+                
+                <blockquote class="story-teaser-quote">
+                    "Orang baik adalah orang yang tidak ingat dia pernah melakukan kebaikan sebesar apapun kebaikan itu, tapi menyesal sejadi-jadinya jika melakukan kesalahan sekecil apapun kesalahan itu."
+                </blockquote>
+            </header>
+
+            <!-- Isi Teks Cerpen -->
             <div class="cerpen-content">
-                <p>Dalam kebisingan kendaraan yang tiada hentinya berlalu-lalang, Tias hanyut dalam pikirannya, menyisakan sekitarnya kosong dalam ketidakpentingan. Pertanyaan Mister Henri tadi pagi terus mengusik pikirannya. "Seperti apa orang baik itu?" tanya Mister Henri, guru sejarah di sekolahnya. Mister Henri sendiri cukup unik. Di saat guru-guru lain terbuai melakukan joget-jogetan di hari kelulusan siswa, dia mengambil inisiatif untuk merangsang murid-muridnya berpikir.</p>
+                <p><span class="dropcap">D</span>alam kebisingan kendaraan yang tiada hentinya berlalu-lalang, Tias hanyut dalam pikirannya, menyisakan sekitarnya kosong dalam ketidakpentingan. Pertanyaan Mister Henri tadi pagi terus mengusik pikirannya. "Seperti apa orang baik itu?" tanya Mister Henri, guru sejarah di sekolahnya. Mister Henri sendiri cukup unik. Di saat guru-guru lain terbuai melakukan joget-jogetan di hari kelulusan siswa, dia mengambil inisiatif untuk merangsang murid-muridnya berpikir.</p>
                 <p>Tias tidak tahu. Kesal rasanya bagi anak yang selalu mendapat peringkat pertama selama lima tahun terakhir di bangku dasar, tidak sanggup menjawab pertanyaan sederhana seperti itu.</p>
                 <p>Teman-temannya di sekolah sebenarnya memberikan jawaban atas pertanyaan itu. Namun, tidak ada satupun yang membuatnya puas. "Orang baik adalah orang yang membelikanku es krim," kata Johan, temannya yang gemuk, dengan mata berbinar. "Ehh.. nggak Johan, orang baik itu seperti papaku," sela Rina, yang sangat sayang dengan ayahnya. Atau si ketua kelas Teddy, dia menjawab, "Menurut saya, orang baik itu selalu berkata jujur, Mister." Mengingat itu, Tias hanya berpikir ada yang salah dari ketiga jawaban itu, yang membuat jawaban-jawaban tersebut masihlah kurang tepat. Dia sendiri tidak tahu, apa bagian yang rumpang itu.</p>
                 <p>Memecah lamunannya, ibunya datang dengan seember cucian tetangga di antara ketiaknya. "Tias!" panggilnya. "Mau sampai kapan ngelamun terus? Mandi sana lalu ngaji, sudah sore ini!"</p>
@@ -69,15 +124,24 @@
                 <p>Bang Aji yang sedang menata gelas menjawab, "Siap, Don!"</p>
                 <p>Di warkop Bang Aji tersedia mi instan, minuman seduh, dan kacang hijau tentu saja lengkap dengan ketan hitamnya. Di sudut kiri atas, dekat kipas angin, terdapat TV tabung yang menyala. Saat itu terdapat talkshow seorang figur bernama Sujiwo Tejo yang ditanyai pertanyaan-pertanyaan dari para penonton. Pembawa acara bilang begini, "Mbah, menurut Mbah orang baik itu yang seperti apa, Mbah?"</p>
                 <p>Mendengar pertanyaan yang belum Tias temui jawabannya keluar dari mulut pembawa acara itu, Tias mendadak tertarik, terpaku pada layar TV yang menyala.</p>
-                <p>"Begini, coba sebutkan hal baik apa saja yang kamu lakukan hari ini!" ucap Sujiwo Tejo kepada pembawa acara itu.</p>
-                <p>"Mengantar anak-anak sekolah..." jawab si pembawa acara.</p>
-                <p>"Bukan... Itu bukan kebaikan... Itu kewajiban. Ayo, apa lagi?" tanya Sujiwo Tejo kembali.</p>
-                <p>Pembawa acara itu ragu. Setelah berpikir sebentar dia menjawab, "Mungkin, menjemput istri bekerja?"</p>
-                <p>"Bukan juga... Sekali lagi itu kewajiban. Apa kamu tidak terpikirkan hal lain lagi?"</p>
-                <p>Pembawa acara itu menggeleng, malu karena tidak berhasil menyebutkan satupun kebaikan yang ia lakukan di hari itu.</p>
-                <p>"Kalau kamu tidak bisa menjawabnya, maka kamu orang baik," ucap Sujiwo Tejo yang membuat pembawa acara itu semangat kembali.</p>
-                <p>"Maksudnya bagaimana, Mbah?" tanyanya penasaran.</p>
-                <p>"Iya... Kamu orang baik, karena kamu melupakan hal baik yang kamu lakukan. Orang baik adalah orang yang tidak ingat dia pernah melakukan kebaikan sebesar apapun kebaikan itu, tapi menyesal sejadi-jadinya jika melakukan kesalahan sekecil apapun kesalahan itu."</p>
+
+                <!-- Siaran TV Sujiwo Tejo -->
+                <div class="broadcast-box">
+                    <div class="broadcast-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                        Siaran Layar Kaca di Warkop
+                    </div>
+                    <p>"Begini, coba sebutkan hal baik apa saja yang kamu lakukan hari ini!" ucap Sujiwo Tejo kepada pembawa acara itu.</p>
+                    <p>"Mengantar anak-anak sekolah..." jawab si pembawa acara.</p>
+                    <p>"Bukan... Itu bukan kebaikan... Itu kewajiban. Ayo, apa lagi?" tanya Sujiwo Tejo kembali.</p>
+                    <p>Pembawa acara itu ragu. Setelah berpikir sebentar dia menjawab, "Mungkin, menjemput istri bekerja?"</p>
+                    <p>"Bukan juga... Sekali lagi itu kewajiban. Apa kamu tidak terpikirkan hal lain lagi?"</p>
+                    <p>Pembawa acara itu menggeleng, malu karena tidak berhasil menyebutkan satupun kebaikan yang ia lakukan di hari itu.</p>
+                    <p>"Kalau kamu tidak bisa menjawabnya, maka kamu orang baik," ucap Sujiwo Tejo yang membuat pembawa acara itu semangat kembali.</p>
+                    <p>"Maksudnya bagaimana, Mbah?" tanyanya penasaran.</p>
+                    <p>"Iya... Kamu orang baik, karena kamu melupakan hal baik yang kamu lakukan. Orang baik adalah orang yang tidak ingat dia pernah melakukan kebaikan sebesar apapun kebaikan itu, tapi menyesal sejadi-jadinya jika melakukan kesalahan sekecil apapun kesalahan itu."</p>
+                </div>
+
                 <p>Mata Tias menjadi berbinar. Dia sebenarnya tidak begitu mengerti apa maksud dari kalimat itu. Tapi dia rasa itu jawaban yang selama ini dia cari.</p>
                 <p>"Jadi, orang baik seperti itu ya..." ucap Tias dalam hati.</p>
                 <p>Bang Aji yang sudah selesai menyeduh minuman mereka, datang dengan dua buah gelas di atas nampan.</p>
@@ -118,9 +182,52 @@
                 <p>Tias mendekati ibunya. Dilihat wajahnya yang bersandar di atas bantal. Tampak kulit yang tidak pernah dirawat sebelumnya. Berwarna cokelat, dan ada tahi lalat di lehernya. Tias melihat ibunya tampak lelah, jadi tidak ingin membangunkannya.</p>
                 <p>Tias pun berjalan keluar, meninggalkan ibunya yang sedang tertidur pulas. Sebelum keluar, dengan suara yang sangat pelan, Tias berkata, "Tias sayang Ibu."</p>
                 <p>Hari pun telah berganti. Matahari kembali bersinar. Dan masih sama seperti hari sebelumnya, Mister Henri kembali bertanya kali ini spesifik kepada Tias, "Tias, menurut kamu orang baik itu seperti apa?"</p>
-                <p>Tias diam sejenak. Tampak gugup karena satu kelas memandang dirinya saat itu. Perlahan dia memberanikan diri membuka mulutnya. Sambil tersenyum dirinya berkata, "Mungkin, seperti ibu saya."</p>
+                
+                <div class="story-highlight-box">
+                    <p>Tias diam sejenak. Tampak gugup karena satu kelas memandang dirinya saat itu. Perlahan dia memberanikan diri membuka mulutnya. Sambil tersenyum dirinya berkata, "Mungkin, seperti ibu saya."</p>
+                </div>
             </div>
+
+            <div class="story-end-marker" aria-hidden="true">❦ ❦ ❦</div>
+
+            <!-- Bar Interaksi -->
+            <div class="story-interaction-bar">
+                <button class="btn-share-link" type="button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
+                    Salin Tautan Cerita
+                </button>
+                <a href="index.html" class="nav-btn">Kembali ke Daftar Cerpen</a>
+            </div>
+
+            <!-- Navigasi Cerita Sebelumnya & Selanjutnya -->
+            <nav class="story-nav-grid" aria-label="Navigasi Cerita">
+                <a href="serigala-terkutuk.html" class="nav-card prev">
+                    <span class="nav-card-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                        Cerpen Sebelumnya
+                    </span>
+                    <span class="nav-card-title">Serigala Terkutuk</span>
+                </a>
+                
+                <a href="pemustaka-yang-bijak.html" class="nav-card next">
+                    <span class="nav-card-label">
+                        Cerpen Selanjutnya
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </span>
+                    <span class="nav-card-title">Pemustaka yang Bijak</span>
+                </a>
+            </nav>
         </article>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Neilo Archive</strong> — Ruang Fiksi Pribadi.</p>
+            <p>Ditulis dan dirawat oleh Neilo Febrian Utomo.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

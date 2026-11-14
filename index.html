@@ -3,76 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neilo Archive</title>
+    <title>Ruang Fiksi - Neilo Archive</title>
+    <meta name="description" content="Kumpulan cerpen, prosa, dan tulisan fiksi pribadi oleh Neilo Febrian Utomo.">
+    
+    <!-- Google Fonts: Lora (Prose) & Plus Jakarta Sans (UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Ruang Fiksi</h1>
-        <p>Kumpulan cerpen dan tulisan pribadi.</p>
+    <!-- Navigasi Atas -->
+    <nav class="site-nav" aria-label="Navigasi Utama">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+                <span>Ruang Fiksi</span>
+            </a>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle-btn" class="nav-btn" type="button" aria-label="Ganti Tema">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <span class="theme-label">Tema</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Hero Beranda -->
+    <header class="home-hero">
+        <div class="container">
+            <div class="home-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                Arsip Cerita Pribadi
+            </div>
+            <h1>Ruang Fiksi</h1>
+            <p>Eksplorasi cerita pendek mengenai manusia, paradoks moral, kehangatan kota, dan luka yang tak sempat terucap.</p>
+            
+            <div class="home-stats">
+                <span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    6 Cerpen
+                </span>
+                <span>•</span>
+                <span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    ±48 Menit Total Bacaan
+                </span>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <!-- Daftar cerpen akan diletakkan di bawah ini -->
-        <article>
-    <!-- Bungkus judul dan tanggal dalam satu kotak -->
-            <div class="header-cerpen">
-                <h2><a href="pemustaka-yang-bijak.html">Pemustaka yang Bijak</a></h2>
-                <time>23 Agustus 2026</time>
-            </div>
-            
-            <p>Seolah kata-kata itu ia kutip dari novel, walau memang benar adanya, penjaga yang sedari tadi memegangi mesra tangan pria itu menjadi gusar dalam hatinya. </p>
-        </article>
+    <main class="container">
+        <!-- Filter Kategori -->
+        <div class="filter-bar" role="tablist" aria-label="Filter Genre Cerpen">
+            <button class="filter-pill active" data-category="all" type="button">Semua Cerita</button>
+            <button class="filter-pill" data-category="romansa" type="button">Romansa & Melankolia</button>
+            <button class="filter-pill" data-category="realitas" type="button">Realitas Sosial</button>
+            <button class="filter-pill" data-category="satir" type="button">Satir</button>
+            <button class="filter-pill" data-category="fabel" type="button">Fabel Filosofis</button>
+        </div>
 
-        <article>
-    <!-- Bungkus judul dan tanggal dalam satu kotak -->
-            <div class="header-cerpen">
-                <h2><a href="pengakuan.html">Pengakuan</a></h2>
-                <time>18 Agustus 2025</time>
-            </div>
-            
-            <p>Suara itu berkata, “Tahukah kamu mengapa jam itu selalu berbunyi dengan suara yang sangat keras? Itu untuk memperingatkan siapapun yang mendengarnya bahwa waktu mereka tidak akan bertahan selamanya.”</p>
-        </article>
+        <!-- Grid Daftar Cerpen -->
+        <section class="story-grid" aria-label="Daftar Cerpen">
+            <!-- Cerpen 1: Pemustaka yang Bijak -->
+            <article class="story-card" data-category="satir" style="--card-accent: #2d6a4f; --card-tint: rgba(45, 106, 79, 0.1);">
+                <div>
+                    <div class="story-card-header">
+                        <span class="story-tag">Satir Sosial</span>
+                        <span class="story-time-meta">⏱ ~3 mnt</span>
+                    </div>
+                    <h2><a href="pemustaka-yang-bijak.html">Pemustaka yang Bijak</a></h2>
+                    <p>Insiden pencurian tas di perpustakaan berujung adu jotos, sampai seorang remaja sok pahlawan maju menceramahi tentang empati semu.</p>
+                </div>
+                <div class="story-card-footer">
+                    <span class="story-date">23 Agustus 2026</span>
+                    <a href="pemustaka-yang-bijak.html" class="story-read-link">
+                        Baca Cerita 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
 
-        <article>
-    <!-- Bungkus judul dan tanggal dalam satu kotak -->
-            <div class="header-cerpen">
-                <h2><a href="perempuan-di-pinggir-jalan.html">Perempuan di Pinggir Jalan</a></h2>
-                <time>31 Juli 2026</time>
-            </div>
-            
-            <p>Aku pernah dapat rating 1, komennya begini, “Ketiak sopir tidak sopan.” </p>
-        </article>
+            <!-- Cerpen 2: Pengakuan -->
+            <article class="story-card" data-category="romansa" style="--card-accent: #3a5a8a; --card-tint: rgba(58, 90, 138, 0.1);">
+                <div>
+                    <div class="story-card-header">
+                        <span class="story-tag">Roman Psikologis</span>
+                        <span class="story-time-meta">⏱ ~17 mnt</span>
+                    </div>
+                    <h2><a href="pengakuan.html">Pengakuan</a></h2>
+                    <p>Monolog kejujuran seorang pemuda penyendiri yang dihantui rasa tak pantas mencintai gadis yang hadir mengubah duniapnya.</p>
+                </div>
+                <div class="story-card-footer">
+                    <span class="story-date">18 Agustus 2025</span>
+                    <a href="pengakuan.html" class="story-read-link">
+                        Baca Cerita 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
 
-        <article>
-    <!-- Bungkus judul dan tanggal dalam satu kotak -->
-            <div class="header-cerpen">
-                <h2><a href="satu-hari-seribu-kali.html">Satu Hari Seribu Kali</a></h2>
-                <time>31 Juli 2026</time>
-            </div>
-            
-            <p>Setiap orang pasti memiliki ketakutan. Seperti temanku Abdul yang biasa kupanggil 'Panjul', dia takut dengan guru matematika kami, Bu Desi namanya. Atau Bondan si tampan, langsung kabur jika ada di antara kami yang memainkan serangga. Termasuk aku, aku juga punya ketakutan: aku takut dengan perempuan. </p>
-        </article>
+            <!-- Cerpen 3: Perempuan di Pinggir Jalan -->
+            <article class="story-card" data-category="realitas" style="--card-accent: #0f766e; --card-tint: rgba(15, 118, 110, 0.1);">
+                <div>
+                    <div class="story-card-header">
+                        <span class="story-tag">Realitas Urban</span>
+                        <span class="story-time-meta">⏱ ~5 mnt</span>
+                    </div>
+                    <h2><a href="perempuan-di-pinggir-jalan.html">Perempuan di Pinggir Jalan</a></h2>
+                    <p>Obrolan santai pengemudi ojol dengan perempuan pelamar kerja di terik jalanan, hingga kenyataan pahit menyergap pelan-pelan.</p>
+                </div>
+                <div class="story-card-footer">
+                    <span class="story-date">31 Juli 2026</span>
+                    <a href="perempuan-di-pinggir-jalan.html" class="story-read-link">
+                        Baca Cerita 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
 
-        <article>
-    <!-- Bungkus judul dan tanggal dalam satu kotak -->
-            <div class="header-cerpen">
-                <h2><a href="serigala-terkutuk.html">Serigala Terkutuk</a></h2>
-                <time>30 Oktober 2025</time>
-            </div>
-            
-            <p> Bangsa serigala hidup makmur. </p>
-        </article>
+            <!-- Cerpen 4: Satu Hari Seribu Kali -->
+            <article class="story-card" data-category="romansa" style="--card-accent: #c026d3; --card-tint: rgba(192, 38, 211, 0.1);">
+                <div>
+                    <div class="story-card-header">
+                        <span class="story-tag">Romansa Remaja</span>
+                        <span class="story-time-meta">⏱ ~12 mnt</span>
+                    </div>
+                    <h2><a href="satu-hari-seribu-kali.html">Satu Hari Seribu Kali</a></h2>
+                    <p>Rayyan yang mual tiap dekat perempuan memberanikan diri mencoba jasa pacar sewaan. Hari konyol yang justru menyembuhkan sepinya.</p>
+                </div>
+                <div class="story-card-footer">
+                    <span class="story-date">31 Juli 2026</span>
+                    <a href="satu-hari-seribu-kali.html" class="story-read-link">
+                        Baca Cerita 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
 
-        <article>
-    <!-- Bungkus judul dan tanggal dalam satu kotak -->
-            <div class="header-cerpen">
-                <h2><a href="tias-itu-orang-baik.html">Tias Itu Orang Baik</a></h2>
-                <time>31 Juli 2026</time>
-            </div>
-            
-            <p>"Lalu orang yang ngelakuin bom bunuh diri atas nama Tuhan itu bagaimana, Ustad? Tuhan mana yang suruh dia ngelakuin itu?" tanya Tias kembali penasaran. Memang, anak kecil penuh dengan pertanyaan. Rasanya akan makan banyak waktu jika harus menuntaskan seluruh isi kepala mereka.</p>
-        </article>
+            <!-- Cerpen 5: Serigala Terkutuk -->
+            <article class="story-card" data-category="fabel" style="--card-accent: #64748b; --card-tint: rgba(100, 116, 139, 0.1);">
+                <div>
+                    <div class="story-card-header">
+                        <span class="story-tag">Fabel Filosofis</span>
+                        <span class="story-time-meta">⏱ ~1 mnt</span>
+                    </div>
+                    <h2><a href="serigala-terkutuk.html">Serigala Terkutuk</a></h2>
+                    <p>Pertanyaan polos seekor anak serigala mengenai rasa terima kasih kepada sang dewi berbuah petaka di bawah dinginnya hukum kawanan.</p>
+                </div>
+                <div class="story-card-footer">
+                    <span class="story-date">30 Oktober 2025</span>
+                    <a href="serigala-terkutuk.html" class="story-read-link">
+                        Baca Cerita 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Cerpen 6: Tias Itu Orang Baik -->
+            <article class="story-card" data-category="realitas" style="--card-accent: #c2410c; --card-tint: rgba(194, 65, 12, 0.1);">
+                <div>
+                    <div class="story-card-header">
+                        <span class="story-tag">Kisah Kehidupan</span>
+                        <span class="story-time-meta">⏱ ~11 mnt</span>
+                    </div>
+                    <h2><a href="tias-itu-orang-baik.html">Tias Itu Orang Baik</a></h2>
+                    <p>Tias terus terbayang pertanyaan gurunya tentang apa arti orang baik. Pencariannya menuntunnya pada setrikaan dan daster ibunya.</p>
+                </div>
+                <div class="story-card-footer">
+                    <span class="story-date">31 Juli 2026</span>
+                    <a href="tias-itu-orang-baik.html" class="story-read-link">
+                        Baca Cerita 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Neilo Archive</strong> — Ruang Fiksi Pribadi.</p>
+            <p>Ditulis dan dirawat oleh Neilo Febrian Utomo.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

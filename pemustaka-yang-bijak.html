@@ -72,6 +72,13 @@
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
                         23 Agustus 2026
                     </span>
+                    <span>•</span>
+                    <span class="story-meta-item">
+                        <a href="#kolom-komentar" style="color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+                            <span style="color: #f59e0b;">★</span>
+                            <span>Ulasan & Rating</span>
+                        </a>
+                    </span>
                 </div>
                 
                 <blockquote class="story-teaser-quote">
@@ -144,6 +151,75 @@
                     <span class="nav-card-title">Pengakuan</span>
                 </a>
             </nav>
+
+            <!-- Kolom Rating Bintang & Komentar Pembaca -->
+            <section class="story-feedback-section" data-story-id="pemustaka-yang-bijak" id="kolom-komentar" aria-label="Rating dan Komentar Pembaca">
+                <div class="feedback-header">
+                    <h2>Ulasan & Komentar Pembaca</h2>
+                    <p>Bagikan kesan, penilaian, atau tanggapanmu terhadap cerpen ini.</p>
+                </div>
+
+                <!-- Kartu Ringkasan & Form Rating Bintang 1-5 -->
+                <div class="rating-card">
+                    <div class="rating-overview">
+                        <div class="rating-average">
+                            <span class="rating-score" id="rating-average-score">0.0</span>
+                            <div class="stars-display" id="rating-average-stars" aria-hidden="true">★★★★★</div>
+                            <span class="rating-count" id="rating-total-count">0 ulasan</span>
+                        </div>
+                        
+                        <div class="rating-action-box">
+                            <span class="rating-action-title">Beri Rating Cerpen Ini:</span>
+                            <div class="star-rating-widget" id="star-rating-widget" role="radiogroup" aria-label="Beri rating bintang 1 sampai 5">
+                                <button type="button" class="star-btn" data-value="1" aria-label="1 Bintang">★</button>
+                                <button type="button" class="star-btn" data-value="2" aria-label="2 Bintang">★</button>
+                                <button type="button" class="star-btn" data-value="3" aria-label="3 Bintang">★</button>
+                                <button type="button" class="star-btn" data-value="4" aria-label="4 Bintang">★</button>
+                                <button type="button" class="star-btn" data-value="5" aria-label="5 Bintang">★</button>
+                            </div>
+                            <div class="rating-status-message" id="rating-status-message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Tambah Komentar -->
+                <div class="comment-form-card">
+                    <h3>Tulis Komentar</h3>
+                    <form id="comment-form" class="comment-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="comment-author-name">Nama / Panggilan <span class="required">*</span></label>
+                                <input type="text" id="comment-author-name" required placeholder="Contoh: Rian" maxlength="50">
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-author-email">Email (Identitas Akun) <span class="required">*</span></label>
+                                <input type="email" id="comment-author-email" required placeholder="nama@email.com">
+                                <small class="form-hint">Email tidak dipublikasikan, digunakan untuk membatasi 1 rating per akun.</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-body">Komentar / Ulasan <span class="required">*</span></label>
+                            <textarea id="comment-body" required rows="4" placeholder="Tuliskan tanggapan, kesan, atau kritikmu terhadap cerpen ini..." maxlength="1000"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit-comment">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                Kirim Komentar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Daftar Komentar Pembaca -->
+                <div class="comments-list-wrapper">
+                    <div class="comments-list-header">
+                        <h3>Komentar Pembaca (<span id="comments-count">0</span>)</h3>
+                    </div>
+                    <div id="comments-container" class="comments-container">
+                        <!-- Komentar akan dimuat secara dinamis oleh JavaScript -->
+                    </div>
+                </div>
+            </section>
         </article>
     </main>
 

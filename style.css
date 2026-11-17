@@ -1206,3 +1206,377 @@ body {
         display: none;
     }
 }
+
+
+/* ==========================================================================
+   14. SISTEM ULASAN & RATING BINTANG 1-5 PER CERPEN
+   ========================================================================== */
+
+.story-feedback-section {
+    margin: 56px 0 32px 0;
+    border-top: 2px solid var(--border-color);
+    padding-top: 40px;
+}
+
+.feedback-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.feedback-header h2 {
+    font-family: var(--font-serif);
+    font-size: 1.85rem;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.feedback-header p {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Kartu Ringkasan & Form Rating Bintang */
+.rating-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow-sm);
+}
+
+.rating-overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.rating-average {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 140px;
+    padding-right: 24px;
+    border-right: 1px solid var(--border-subtle);
+}
+
+.rating-score {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    font-family: var(--font-sans);
+}
+
+.stars-display {
+    color: #f59e0b;
+    font-size: 1.25rem;
+    margin: 6px 0;
+    letter-spacing: 2px;
+}
+
+.rating-count {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.rating-action-box {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-action-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.star-rating-widget {
+    display: inline-flex;
+    gap: 6px;
+}
+
+.star-btn {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #cbd5e1;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.star-btn.active,
+.star-btn.hover {
+    color: #f59e0b;
+}
+
+.star-btn:hover:not(:disabled) {
+    transform: scale(1.15);
+}
+
+.star-btn:disabled {
+    cursor: default;
+}
+
+.rating-status-message {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    min-height: 20px;
+}
+
+.rating-badge-voted {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* Bilah Identitas Akun Pengguna */
+.account-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: var(--bg-surface-subtle);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.account-identity-text {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.btn-switch-account {
+    background: transparent;
+    border: none;
+    color: var(--story-accent);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+}
+
+/* Kartu Form Komentar */
+.comment-form-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-sm);
+}
+
+.comment-form-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    margin: 0 0 20px 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group .required {
+    color: #e11d48;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--story-accent);
+    box-shadow: 0 0 0 3px var(--story-tint);
+}
+
+.form-hint {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.btn-submit-comment {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--story-accent);
+    color: #ffffff;
+    padding: 10px 22px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-submit-comment:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+/* Daftar Komentar */
+.comments-list-wrapper {
+    margin-top: 24px;
+}
+
+.comments-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+.comments-list-header h3 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.comment-item {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.2s ease;
+}
+
+.comment-item-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.comment-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--story-accent);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.comment-meta {
+    flex: 1;
+}
+
+.comment-author-name {
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.comment-rating-stars {
+    color: #f59e0b;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.comment-body-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    white-space: pre-line;
+    margin: 0;
+}
+
+.comments-empty {
+    text-align: center;
+    padding: 32px;
+    color: var(--text-muted);
+    font-style: italic;
+    background: var(--bg-surface);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+/* Responsivitas Bagian Komentar */
+@media (max-width: 640px) {
+    .rating-overview {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .rating-average {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-right: 0;
+        padding-bottom: 16px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .star-btn {
+        font-size: 1.8rem;
+    }
+}
